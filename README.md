@@ -1,5 +1,5 @@
 # DeepSHM
-This repository implements the model from "Deep learning model of somatic hypermutation reveals importance of sequence context beyond targeting of AID and Polη hotspots" by Tang, Krantsevich & MacCarthy. Using DeepSHM you can simply use one of the provided models to make SHM-related predictions for your data, or you can train your own CNN model for any task that uses DNA/RNA one-hot encoded data as input.
+This repository implements the model from "Deep learning model of somatic hypermutation reveals importance of sequence context beyond targeting of AID and Polη hotspots" by Tang, Krantsevich & MacCarthy (https://www.biorxiv.org/content/10.1101/2021.08.03.453264v1.full.pdf). Using DeepSHM you can simply use one of the provided models to make SHM-related predictions for your data, or you can train your own CNN model for any task that uses DNA/RNA one-hot encoded data as input.
 
 
 ## Instalation
