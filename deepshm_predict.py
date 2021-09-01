@@ -1,6 +1,4 @@
-#import functions as deepshm
 from tensorflow import keras
-#import sys
 import numpy as np
 import csv
 import argparse
@@ -62,13 +60,10 @@ with open(args.input,'r') as data:
         if line[0][0] == '>':
             if seq != '':
                 if len(seq) >= k:
-                    #print(seq)
                     for i in range(len(seq) - k+1):
                         mf_pred, sub_pred = make_prediction(seq, i, k)
                         kmer_data = [seq_id, i+1, i+k, i+int(k/2)+1, seq[i+int(k/2)], mf_pred, sub_pred[0], sub_pred[1], sub_pred[2], sub_pred[3]]
-                        #outputs.append(kmer_data)
                         with open(args.o, 'a') as f: 
-                            # using csv.writer method from CSV package
                             write = csv.writer(f)
                             write.writerow(kmer_data)
             new_seq = 1
@@ -84,8 +79,6 @@ if len(seq) >= k:
     for i in range(len(seq) - k+1):
         mf_pred, sub_pred = make_prediction(seq, i, k)
         kmer_data = [seq_id, i+1, i+k, i+int(k/2)+1, seq[i+int(k/2)], mf_pred, sub_pred[0], sub_pred[1], sub_pred[2], sub_pred[3]]
-        #outputs.append(kmer_data)
         with open(args.o, 'a') as f: 
-            # using csv.writer method from CSV package
             write = csv.writer(f)
             write.writerow(kmer_data)
