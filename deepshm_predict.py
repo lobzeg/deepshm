@@ -41,7 +41,6 @@ args = parser.parse_args()
 header = ['sequence id', 'k-mer start', 'k-mer end', 'middle nucleotide position', 
             'middle nucleotide', 'mutation frequency', 'N>A', 'N>C', 'N>G', 'N>T']
 with open(args.o, 'w') as f: 
-    # using csv.writer method from CSV package
     write = csv.writer(f)
     write.writerow(header)
 
